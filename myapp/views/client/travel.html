@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>旅游攻略</title>
+	<link rel="stylesheet" href="/css/travel.css">
+	<link rel="stylesheet" href="/css/gong.css">
+	<script src="/js/jquery.js"></script>
+</head>
+<body>
+	<div class="head"></div>
+	<div class="container">
+		
+		<!-- <div class='head'>
+			<div class='head_left'>旅游网</div>
+			<ul class='head_central'>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">首页</a></li>
+			</ul>
+			<div class='head_right'>
+				<a href="#" class='float'><i class='head_right_sina'></i></a>
+				<a href="#" class='float'><i class='head_right_qq'></i></a>
+				<a href="#" class='float'><i class='head_right_weixin'></i></a>
+				<a href="#" class='text'>登录</a>
+				<span>|</span>
+				<a href="#" class='text'>注册</a>
+			</div>
+		</div> -->
+
+
+		<div class="travel"> <!-- 旅游攻略的内容 -->
+			<div class="travel_top">
+				<div class="tra_left"> <!-- 旅游攻左边部分 -->
+					<div class="gonglve_nav">
+						<!-- 导航栏海外栏目 -->
+						<div class="nav_title nt_one">
+							<p class="p_one">海外冬季目的地精选</p>
+							<div class="overseas">
+								<ul class="over_ul">
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;1</em>
+										<a href="" class="a">北海道</a>
+										<a href="#">在皑皑白雪中泡温泉</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;2</em>
+										<a href="" class="a">冰岛</a>
+										<a href="#">亲近极北之地的莫测极光</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;3</em>
+										<a href="" class="a">澳大利亚</a>
+										<a href="#">在南半球过个暖洋洋的圣诞</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;4</em>
+										<a href="">洛杉矶</a>
+										<a href="#">阳光加州，避寒圣地</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;5</em>
+										<a href="">新加坡</a>
+										<a href="#">活力四射的花园之城</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;6</em>
+										<a href="">斯里兰卡</a>
+										<a href="#">便利签证，异域风情</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;7</em>
+										<a href="">帕劳</a>
+										<a href="#">潜水者的朝圣地</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;8</em>
+										<a href="">缅甸</a>
+										<a href="#">踏上佛国净化之旅</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;9</em>
+										<a href="">菲律宾</a>
+										<a href="#">徜徉海岛间，潜入深海中</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">10</em>
+										<a href="">迪拜</a>
+										<a href="#">沙漠中的奇迹之城</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav_title nt_tow">
+							<p class="p_tow">国内冬季目的地精选</p>
+							<div class="inland">
+								<ul class="over_ul">
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;1</em>
+										<a href="" class="a">漠河</a>
+										<a href="#">至寒圣地的极光约会</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;2</em>
+										<a href="" class="a">黄山</a>
+										<a href="#">银装素裹秒杀菲林季</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;3</em>
+										<a href="" class="a">海螺沟</a>
+										<a href="#">冰川温泉的童话世界</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;4</em>
+										<a href="">壶口瀑布</a>
+										<a href="#">绝美的冰瀑玉壶奇观</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;5</em>
+										<a href="">西岭雪山</a>
+										<a href="#">成都周边最大滑雪场</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;6</em>
+										<a href="">西双版纳</a>
+										<a href="#">聆听欣赏原生态歌舞</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;7</em>
+										<a href="">霞浦</a>
+										<a href="#">红枫白荻的交相辉映</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;8</em>
+										<a href="">广州</a>
+										<a href="#">相约一起喝粤式早茶</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;9</em>
+										<a href="">高雄</a>
+										<a href="#">暖冬初阳遇最美台湾</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">10</em>
+										<a href="">三亚</a>
+										<a href="#">去热带海滩逃离寒冬</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav_title nt_therr">
+							<p class="p_therr">奔向海岛</p>
+							<div class="island">
+								<ul class="over_ul">
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;1</em>
+										<a href="" class="a">象岛</a>
+										<a href="#">腻了普吉，来象岛玩个深度</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;2</em>
+										<a href="" class="a">巴厘岛</a>
+										<a href="#">巴厘岛免签啦</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one em">&nbsp;&nbsp;3</em>
+										<a href="" class="a">毛里求斯</a>
+										<a href="#">印度洋上的海上明珠</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;4</em>
+										<a href="">塞班岛</a>
+										<a href="#">错“季”出行，也有惊喜</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;5</em>
+										<a href="">长滩岛</a>
+										<a href="#">潜水与蜜月的天堂</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;6</em>
+										<a href="">圣托里尼</a>
+										<a href="#">蓝白之城映衬着海风吹拂</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;7</em>
+										<a href="">沙美岛</a>
+										<a href="#">如果你厌倦了芭提雅</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;8</em>
+										<a href="">杜马盖</a>
+										<a href="#">地找小丑鱼做客去！</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">&nbsp;&nbsp;9</em>
+										<a href="">兰卡威</a>
+										<a href="#">海钓、潜水，看蓝天</a>
+									</li>
+									<li class="over_li">
+										<em class="li_one">10</em>
+										<a href="">沙巴</a>
+										<a href="#">这里有世界上最美的落日</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav_title nt_four">
+							<p>主题推荐</p>
+							<div class="theme">
+								<div class="theme_one">
+									<div class="one_left">骑行</div>
+									<div class="one_right">
+										<span>海南</span>
+										<span>青海湖</span>
+										<span>敦煌</span>
+										<span>漠河</span>
+										<span>台湾</span>
+										<span>北京</span>
+										<span>杭州</span>
+										<span>双廊阿尔山</span>
+										<span>法国</span>
+										<span>厦门</span>
+										<span>阳朔</span>
+										<span>香格里拉</span>
+										<span>太湖</span>
+										<span>西藏</span>
+										<span>大理</span>
+										<span>成都</span>
+										<span>乌鲁木齐</span>
+										<span>姿源</span>
+									</div>
+								</div>
+								<div class="theme_one">
+									<div class="one_left">潜水</div>
+									<div class="one_right">
+										<span>沙巴</span>
+										<span>三亚</span>
+										<span>斐济</span>
+										<span>巴厘岛</span>
+										<span>长滩岛</span>
+										<span>马尔代夫</span>
+										<span>苏梅岛</span>
+										<span>普吉岛</span>
+										<span>夏威夷</span>
+										<span>巴拉望</span>
+										<span>马来西亚</span>
+										<span>埃及</span>
+										<span>印度尼西亚</span>
+										<span>泰国</span>
+									</div>
+								</div>
+								<div class="theme_one">
+									<div class="one_left">徒步</div>
+									<div class="one_right">
+										<span>尼泊尔</span>
+										<span>虎跳峡</span>
+										<span>喀纳斯</span>
+										<span>墨脱</span>
+										<span>小五台</span>
+										<span>贡嘎雪山</span>
+										<span>海坨山</span>
+										<span>海螺沟</span>
+										<span>雨崩</span>
+										<span>三峡</span>
+										<span>阳朔</span>
+										<span>新都桥</span>
+										<span>楠溪江</span>
+										<span>梅里雪山</span>
+										<span>野三坡</span>
+										<span>西双版纳</span>
+									</div>
+								</div>
+								<div class="theme_one">
+									<div class="one_left">潜水</div>
+									<div class="one_right">
+										<span>珠穆朗玛峰</span>
+										<span>乞力马扎罗</span>
+										<span>太白山</span>
+										<span>四姑娘山</span>
+										<span>雁荡山</span>
+										<span>云台山</span>
+										<span>普陀山</span>
+										<span>庐山</span>
+										<span>海陀山</span>
+										<span>小五台</span>
+										<span>华山</span>
+										<span>泰山</span>
+										<span>黄山</span>
+										<span>武功山</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nav_search">
+						<span></span>
+						<input type="text" placeholder="请输入想去的地方，如：香港">
+					</div>
+					<div class="logo">
+						<img src="/img/logo.png" alt="">
+						<div class="logo_app">
+							<p>马蜂窝自由行APP下载</p>
+							<span>iPhone版</span>
+							<span class="app_jg">|</span>
+							<span>Android版</span>
+							<span class="app_jg">|</span>
+							<span>iPad版</span>
+						</div>
+					</div>
+				</div>
+				<div class="tra_right"><!-- 旅游攻略右边轮播图 -->
+					<div class="tra_img"  id="tra_img">
+					</div>
+				</div>
+			</div>
+			<div class="travel_bottom"><!-- 下半部分全部内容 -->
+				<div class="sidebar"><!-- 左边旅游导航 -->
+					<div class="side_hd">旅游攻略导航</div>
+					<div class="nav_drop">
+						<div class="trigger">
+							国内
+							<i></i>
+						</div>
+						<div class="tri_one"><!-- 左边旅游导航 国内点击-->
+							<span>四川(27)</span>
+							<span>云南(27)</span>
+							<span>江苏(23)</span>
+							<span>北京(21)</span>
+							<span>浙江(20)</span>
+							<span>广东(18)</span>
+							<span>河北(16)</span>
+							<span>台湾(16)</span>
+							<span>贵州(14)</span>
+							<span>内蒙古(13)</span>
+							<span>西藏(13)</span>
+							<span>江西(12)</span>
+							<span>山东(12)</span>
+							<span>广西(11)</span>
+							<span>青海(11)</span>
+							<span>河南(10)</span>
+							<span>安徽(9)</span>
+							<span>福建(9)</span>
+							<span>海南(9)</span>
+							<span>黑龙江(9)</span>
+							<span>吉林(9)</span>
+							<span>新疆(9)</span>
+							<span>湖南(8)</span>
+							<span>山西(8)</span>
+							<span>陕西(8)</span>
+							<span>湖北(7)</span>
+							<span>甘肃(6)</span>
+							<span>辽宁(6)</span>
+							<span>澳门(4)</span>
+							<span>香港(4)</span>
+							<span>上海(3)</span>
+							<span>重庆(3)</span>
+							<span>宁夏(2)</span>
+							<span>天津(2)</span>
+						</div>
+						<span class="span">|</span>
+						<div class="trigger">
+							国外
+							<i></i>
+						</div>
+						<div class="tri_tow"><!-- 左边旅游导航 国外点击-->
+							<span>四川(27)</span>
+							<span>云南(27)</span>
+							<span>江苏(23)</span>
+							<span>北京(21)</span>
+							<span>浙江(20)</span>
+							<span>广东(18)</span>
+							<span>河北(16)</span>
+							<span>台湾(16)</span>
+							<span>贵州(14)</span>
+							<span>内蒙古(13)</span>
+							<span>西藏(13)</span>
+							<span>江西(12)</span>
+							<span>山东(12)</span>
+							<span>广西(11)</span>
+							<span>青海(11)</span>
+							<span>河南(10)</span>
+							<span>安徽(9)</span>
+							<span>福建(9)</span>
+							<span>海南(9)</span>
+							<span>黑龙江(9)</span>
+							<span>吉林(9)</span>
+							<span>新疆(9)</span>
+							<span>湖南(8)</span>
+							<span>山西(8)</span>
+							<span>陕西(8)</span>
+							<span>湖北(7)</span>
+							<span>甘肃(6)</span>
+							<span>辽宁(6)</span>
+							<span>澳门(4)</span>
+							<span>香港(4)</span>
+							<span>上海(3)</span>
+							<span>重庆(3)</span>
+							<span>宁夏(2)</span>
+							<span>天津(2)</span>
+						</div>
+						<span class="span">|</span>
+						<div class="trigger">
+							主题
+							<i></i>
+						</div>
+						<div class="tri_therr"><!-- 左边旅游导航 主题点击-->
+							<span>四川(27)</span>
+							<span>云南(27)</span>
+							<span>江苏(23)</span>
+							<span>北京(21)</span>
+							<span>浙江(20)</span>
+							<span>广东(18)</span>
+							<span>河北(16)</span>
+							<span>台湾(16)</span>
+							<span>贵州(14)</span>
+							<span>内蒙古(13)</span>
+							<span>西藏(13)</span>
+							<span>江西(12)</span>
+							<span>山东(12)</span>
+							<span>广西(11)</span>
+							<span>青海(11)</span>
+							<span>河南(10)</span>
+							<span>安徽(9)</span>
+							<span>福建(9)</span>
+							<span>海南(9)</span>
+							<span>黑龙江(9)</span>
+							<span>吉林(9)</span>
+							<span>新疆(9)</span>
+							<span>湖南(8)</span>
+							<span>山西(8)</span>
+							<span>陕西(8)</span>
+							<span>湖北(7)</span>
+							<span>甘肃(6)</span>
+							<span>辽宁(6)</span>
+							<span>澳门(4)</span>
+							<span>香港(4)</span>
+							<span>上海(3)</span>
+							<span>重庆(3)</span>
+							<span>宁夏(2)</span>
+							<span>天津(2)</span>
+						</div>
+					</div>
+					<div class="nav_img">
+						<img src="/img/dongjing.jpeg" alt="">
+						<p>更新日期:2016-07-15</p>
+						<div class="down">
+							<span></span>
+							<p>1621470人下载</p>
+						</div>
+					</div>
+					<ul>
+						<li class="nav_site">
+							<span>2</span>
+							<a href="#">日本</a>
+						</li>
+						<li class="nav_site">
+							<span>3</span>
+							<a href="#">大阪</a>
+						</li>
+						<li class="nav_site">
+							<span>4</span>
+							<a href="#">香港</a>
+						</li>
+						<li class="nav_site">
+							<span>5</span>
+							<a href="#">京都</a>
+						</li>
+						<li class="nav_site">
+							<span>6</span>
+							<a href="#">成都</a>
+						</li>
+						<li class="nav_site">
+							<span>7</span>
+							<a href="#">吉普岛</a>
+						</li>
+						<li class="nav_site">
+							<span>8</span>
+							<a href="#">泰国</a>
+						</li>
+						<li class="nav_site">
+							<span>9</span>
+							<a href="#">厦门</a>
+						</li>
+						<li class="nav_site">
+							<span>10</span>
+							<a href="#">曼谷</a>
+						</li>
+					</ul>
+				</div>
+				<div class="message"><!-- 右边旅游攻略推荐 -->
+					<div class="side_hd">推荐攻略</div>
+					<div class="mg_item">
+						<div class="mg_bar">
+							<span class="that_one">
+								<i></i>
+								首页
+								<strong>游记</strong>
+							</span>
+							<span class="that_tow">
+								<span>20090</span>
+								峰峰顶
+								<i></i>
+							</span>
+						</div>
+						<div class="mg_title">
+							<p>深圳：旧天堂书店</p>
+						</div>
+						<div class="mg_image">
+							<div class="image">
+								<img src="/img/youji02.jpeg" alt="">
+							</div>
+							<div class="text">
+								<p>作为一名土著，每每被朋友问到来上海，有什么推荐有什么好玩的，我第一反应和其他土著一样，真心没什么好玩的。但这样敷衍不行，好歹去了这么多地方，如果连自己的家乡也不了解实在太丢人。正巧成都的朋友来上海中转，找我玩，激起了我寻找上海...</p>
+								<div class="yonghu">
+									<img src="/img/yonghu.png" alt="">
+									<span>深海里的水母</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div></div>
+	</div>
+
+	<script type="text/javascript">
+		var imgsArray = ['01.jpeg','02.jpeg','03.jpeg','04.jpeg','05.jpeg','01.jpeg'];
+		var imgsLength = imgsArray.length;
+		var traImg = document.getElementById("tra_img");
+		traImg.style.width = imgsLength * 701 + 'px';
+		var str ="";
+		for(var i = 0;i <imgsLength; i++){
+			str += '<img src="/img/'+ imgsArray[i] +' " alt="" />'
+		}
+		traImg.innerHTML = str;
+		console.dir(traImg);
+		var marginLeftValue = 0;
+		function run(){
+			traImg.style.transition = '0.4s linear';
+			marginLeftValue++
+			traImg.style.marginLeft = '-'+ (marginLeftValue) * 701 +'px';
+		}
+		setInterval(function(){
+			if(marginLeftValue < imgsArray.length-1){
+				run()
+			}
+			else{
+				traImg.style.transition = '0s';
+				marginLeftValue = 0;
+				traImg.style.marginLeft = '0';
+			}
+		},2000);
+
+		var flag = [false,false,false];
+		$('.nav_drop').on('click','.trigger',function(){
+			var index = $(this).index();
+			for(var i = 0;i<$('.trigger').length;i++){
+				$('.trigger').eq(i).next().css('display','none');
+			}
+			if (flag[index]) {
+					flag = [false,false,false];
+					return
+				}else{
+					flag[index] = true;
+				}
+			$(this).next().css('display','block');		
+		})
+		$('.head').load('http://localhost:8085/head');
+	</script>
+</body>
+</html>

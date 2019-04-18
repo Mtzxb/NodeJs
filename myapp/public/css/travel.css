@@ -1,0 +1,138 @@
+/*
+* @Author: admin
+* @Date:   2018-03-02 09:32:26
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-03-19 10:49:27
+*/
+html,body,div,span,a,img,li,ul,p,h1,h2,h3,h4{margin: 0; padding: 0; box-sizing: border-box; outline: 0;}
+body{width: 100%; height: 100%;}
+.container{width: 100%; height: 100%;}
+
+.head .head_central .tiaozhuan1{!important;background-color: #fff;}
+.head .head_central .tiaozhuan3{background-color: #ff9d00;}
+
+/*-----------  旅游板块的内容  -----------*/
+.travel{ margin: 0 auto; width:1000px; background-color: #fff; height: 100%;}
+.travel_top{width: 100%; margin-bottom: 15px; }
+.travel_top:after{display: block; clear: both; content: ""; visibility: hidden;}
+.tra_left{width: 26%; height: 340px; margin-right: 40px; float: left;}
+
+/*-----------  旅游板块导航栏  -----------*/
+.gonglve_nav{width: 100%; height: 161px; border: 1px solid #ddd; box-shadow: 1px 1px 5px rgba(230, 228, 228, 0.6); 
+	position: relative;}
+.nav_title{width:100%; height: 40px; padding: 0 15px; border-bottom: 1px solid #ddd; font-size: 14px; 
+	color: #666; line-height: 40px; position: relative;}
+/* 国外导航栏 */
+.nt_one:hover .overseas{display: block;}
+.nt_one:hover .p_one {color: #ff9d00;}
+.overseas{width: 340px; height: 340px; border:1px solid #ddd; position: absolute; left: 258px; top: -1px; padding: 10px 20px;
+	display: none;  background-color: #fff;}
+.over_ul{width: 100%; height: 100%; list-style: none; }
+.over_ul .over_li{width: 100%; height: 30px;}
+.over_li a{text-decoration: none;padding-left: 10px; color: #666;}
+.over_li a:nth-child(3){color: #999; font-size: 12px;}
+.over_li em{font-size: 18px;}
+.over_li a:hover{text-decoration: underline; color: #ff9d00;}
+.over_li .em{color: #ff9d00;}
+.over_li .a{font-size: 14px; color:#ff9d00;}
+
+
+/* 国内导航栏 */
+.nt_tow:hover .inland{display: block;}
+.nt_tow:hover .p_tow{color: #ff9d00;}
+.inland{width: 340px; height: 340px; border:1px solid #ddd; position: absolute; left: 258px; top: -41px; display: none;
+	 padding: 10px 20px; background-color: #fff;}
+
+/* 海岛导航栏 */
+.nt_therr:hover .island{display: block;}
+.nt_therr:hover .p_therr{color: #ff9d00;}
+.island{width: 340px; height: 340px; border:1px solid #ddd; position: absolute; left: 258px; top: -81px; display: none;
+	padding: 10px 20px; background-color: #fff;}
+
+/* 主题推荐导航栏 */
+.nt_four:hover .theme{display: block;}
+.theme{width: 470px; height: 340px; border:1px solid #ddd; position: absolute; left: 258px; top: -121px; display: none;
+	background-color: #fff;}
+.theme .theme_one{width: 100%; font-size: 12px;}
+.theme_one:after{display: block; clear: both; content: ""; visibility: hidden;}
+.theme_one .one_left{width: 15%; float: left;text-align: center;}
+.theme_one .one_right{width: 83%; float: right; line-height: 30px; padding-top: 5px;}
+.one_right span{margin-right: 15px; color: #999;}
+.one_right span:hover{text-decoration: underline; color: #ff9d00;}
+
+/* 图片下载底部 */
+.nav_title:after{content: ""; display: inline-block; width: 6px; height: 10px; position: absolute; right: 15px; top: 15px;
+    background: url(/img/new-gl-icon6.png) no-repeat -20px -40px; overflow: hidden;}
+.nav_search{width: 100%; height: 42px; border: 2px solid #FFA800; margin-top: 6px; line-height: 34px;}
+.nav_search:after{content: ""; display: block; clear: both; visibility: hidden;}
+.nav_search span{float: left; height: 27px; width: 29px; background: url(/img/new-gl-icon6.png) -20px -60px no-repeat;
+ 	margin-top: 7px; margin-left: 8px;}
+.nav_search input{width: 210px; height: 30px; line-height: 30px; outline: none; border: 0; padding-left: 5px; }
+.logo{width: 100%; height: 65px; border-bottom: 1px solid #E3E3E3; margin-top: 15px; padding-bottom: 14px;}
+.logo:after{content: ""; display: block; clear: both; visibility: hidden;}
+.logo img{width: 50px; height: 50px; float:left; }
+.logo_app{width: 80%; height: 50px; float:left; padding-left:20px;}
+.logo_app p{color:#FFA800; text-align: center;}
+ .logo_app span{font-size: 12px; color:#666; } 
+.app_jg{width: 10px; height: 10px; display: inline-block; text-align: center;line-height: 10px;}
+
+
+/*-----------  旅游板块右边轮播图  -----------*/
+.tra_right{width: 70%; height: 340px; float: left; overflow: hidden;}
+.tra_img{width: 100px; height: 100%; float: left;}
+
+
+/*-----------  旅游板块：下半部分左边旅游攻略导航 -----------*/
+.travel_bottom{width: 100%;}
+.travel_bottom:after{content: ""; display: block; clear: both; visibility: hidden;}
+.sidebar{width: 16%; margin-right: 50px; float: left;}
+.side_hd{width: 100%; height: 51px; line-height: 50px; border-bottom: 1px solid #eee; color:#333;}
+
+/*-----------  旅游板块：下半部分左边旅游攻略：国内国外主题 -----------*/
+.nav_drop{width: 100%; height: 45px; border-bottom:1px solid #eee; line-height: 45px; position: relative;}
+.nav_drop:after{clear: both; content: "";}
+.nav_drop .span{float: left; margin: 0px 6px; font-size: 12px; color: #eee;}
+.trigger{width: 42px; height: 42px; font-size: 14px; color: #333; float: left;}
+.nav_drop .tri_one,.tri_tow,.tri_therr{width: 450px; height: 280px; position: absolute; display: none; background-color: #fff;
+	color: #333; font-size: 14px; border: 1px solid #e5e5e5; padding: 10px 20px;}
+.nav_drop .tri_one span,.tri_tow span,.tri_therr span{margin-right: 10px;}
+.nav_drop .tri_one span:hover,.tri_tow span:hover,.tri_therr span:hover{text-decoration: underline; color: #ff9d00;}
+.tri_one{left: 0; top: 55px; }
+.tri_tow{left: 58px; top: 55px;}
+.tri_therr{left: 116px; top: 55px;}
+
+.trigger i{width: 8px; height: 4px; font-size: 0; border-top: 4px solid #999; border-left: 4px dashed transparent; 
+	border-right: 4px dashed transparent; padding-top: 3px;}
+.nav_img{padding:25px 0;}
+.nav_img p{font-size: 12px; color: #333; padding:5px 0 5px 10px;}
+.down{width: 80%; height: 25px; line-height: 24px; background-color: #eee; border-radius: 30px;}
+.down span{display: block; height:24px; width:24px; background: url(/img/new-gl-icon6.png) -20px -90px no-repeat;float: left;}
+.down p{font-size: 12px; display: block; width: 100px;height: 25px;line-height: 15px;float: left; padding-left: 10px; color: #333;}
+.sidebar ul{list-style: none;}
+.nav_site{border-top: 1px solid #eee; padding:15px 0; line-height: 24px;}
+.nav_site span{font-size: 18px; margin-right: 10px; color: #ff9d00;}
+.nav_site a{text-decoration: none; color: #333; font-size: 14px;}
+.nav_site a:hover{color: #ff9d00; text-decoration: underline;}
+
+/*-----------  旅游板块：下半部分右边旅游攻略游记推荐 -----------*/
+.message{width: 79%; float: left;}
+.mg_item{width: 100%; padding: 20px 0; border-bottom: 1px solid #eee;}
+.mg_bar{ width: 100%; font-size: 12px; line-height: 0px; height: 32px; }
+.mg_bar .that_one{width: 85px; height: 20px; display: inline-block; line-height: 20px;}
+.mg_bar .that_one i{width: 20px; height: 20px; background: url(/img/new-gl-icon6.png) 0 -40px no-repeat; float: left; 
+	margin-right: 10px;}
+.mg_bar strong{color: #ff9d00;}
+.mg_bar .that_tow{display: inline-block; float: right; width: 142px; height: 32px; border:1px solid #ff9d00; border-radius: 30px;
+	padding: 0 15px; line-height: 32px;}
+.that_tow span{color: #ff9d00;}
+.that_tow i{width: 20px; height: 20px; display: inline-block; background: url(/img/new-gl-icon6.png) -40px -40px no-repeat; 
+	float: right;  margin: 8px 0;}
+.mg_title{font-size: 20px; margin-bottom: 20px;}
+.mg_image {width: 100%; height: 150px;}
+.mg_image .image{float: left; width: 220px; height: 150px;}
+.mg_image .text{float: right; width: 550px; height: 150px; font-size: 14px; color: #666;padding-top: 15px;}
+.text p{width: 100%; height: 112px; line-height: 25px;}
+.text .yonghu{float: right; padding-right: 30px; font-size: 12px; line-height: 16px; }
+.yonghu img{width: 16px; height: 16px; border-radius: 50%;}
+.yonghu span{display: inline-block; float: right; padding-left: 5px;}
+

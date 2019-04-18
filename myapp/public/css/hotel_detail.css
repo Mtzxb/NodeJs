@@ -1,0 +1,103 @@
+/* 酒店详情界面样式 */
+.InduHotel{width: 1000px;margin:0 auto;color: #666;}
+.head .head_central .tiaozhuan1{background-color: #fff;}
+.head .head_central .tiaozhuan4{background-color: #ff9d00;}
+
+
+/* 酒店详情 头部样式 */
+.hotel_head{margin-top: 40px;position: relative;}
+.tq{position: absolute;right: 0;top: -20px;float: right;}
+.hotel_cname{font-size: 24px;line-height: 30px;color: #333;}
+.hotel_ename{font-size: 14px;line-height: 24px;margin: 5px 0;}
+.hotel_ename i{width: 70px;height: 13px;margin-left: 10px;background: url(/img/hotel-detail-icon8.png) no-repeat -150px -230px;vertical-align: -1px;}
+.hotel_location{font-size: 12px;line-height: 20px;color: #999;}
+.hotel_location a{color: #ff9d00;}
+.hotel_location a:hover{text-decoration: underline;}
+.hotel_location a i{width: 13px;height: 15px;background: url(/img/hotel-detail-icon8.png) no-repeat -130px 0;vertical-align: middle;margin: 0 5px 0 10px;}
+
+.hotel_extra{float: right;position: absolute;bottom: 0;right: 0;font-size: 14px;}
+.hotel_score b{font-size: 30px;color: #ff9d00; font-weight:bold;}
+.divided{border-left: 1px solid #999;height: 36px;margin: 0 10px;}
+.eval strong{font-weight: normal;font-size: 18px;line-height: 20px;margin-bottom: 5px;padding-bottom: 5px;}
+.eval i{width: 16px;height: 14px;background: url(/img/hotel-detail-icon8.png) no-repeat -220px -30px;margin-right: 5px;vertical-align: middle;}
+
+/* 酒店详情 酒店图片部分 */
+.hotel_body{margin: 10px 0 15px;}
+.hotel_bg{float: left;width: 640px;height: 380px;position: relative;color: #fff;}
+.hotel_bg img{width: 640px;height: 380px;border-radius: 5px;}
+.h_intro{position: absolute;width: 260px;padding:8px;line-height: 24px;font-size: 14px;left: 15px;bottom: 15px;background-color: rgba(0,0,0,0.6);border-radius: 4px;}
+.Himg_list{width: 360px;height: 380px;float: right;}
+.Himg_list li{width: 170px;height: 180px;float: left;margin: 0 0 20px 10px;display: inline;}
+.Himg_list li img{width:100%;height: 100%;border-radius: 5px;}
+
+/* 酒店详情 酒店导航部分 */
+.hotel_nav{color: #000;box-shadow: 0 5px 4px rgba(0,0,0,0.1);padding-bottom: 20px;}
+.nav_list li {float: left;line-height: 30px;font-size: 16px;}
+.nav_list li a{color: #000;font-size: 16px;padding: 0 30px;}
+
+.nav_r {float: right;margin-right: 15px;}
+.nav_r a{margin-left: 45px;color: #000;font-size: 14px;}
+.nav_r a:hover{text-decoration: underline;}
+.nav_a i,.nav_b i{width: 23px;height: 24px;background: url(/img/hotel-detail-icon8.png) no-repeat;vertical-align: middle;margin-right: 5px;}
+.nav_a i{background-position: -70px -245px;}
+.nav_b i{background-position: -100px 0;width: 27px;}
+
+/* 酒店详情 酒店预订信息部分 */
+
+
+/* 酒店价格部分 */
+.booking_info{margin-top: 20px;border: 1px solid #ccc;}
+.booking_info a:last-child{border-bottom-style: none;margin-bottom: -3px;}
+.booking_info a:hover{background-color: #f7f7f7;}
+.booking_pri{color: #333;font-size: 14px;line-height: 46px;background-color: #f4f4f4;padding: 0 15px;height: 46px;border-bottom: 1px solid #ccc;}
+.pri_orign,.pri_kinds,.pri_price{float: left;}
+.pri_orign{width: 235px;margin-left: 30px;}
+.pri_kinds{width: 400px;margin-left: 150px;}
+.pri_price{width: 110px;padding-right: 20px;margin-right: 20px;}
+.room_item{width:100%;padding:15px;border-bottom: 1px dashed #cecece;color: #333;display: inline-block;margin-top: -4px;}
+.room_item div{float: left;}
+.room_name{width: 235px;}
+.room_name img{width: 100px;height: 20px;vertical-align: middle;}
+.room_item .room_price{color: #ff8a00;font-size: 20px;font-weight: bold;float: right;margin-right: 125px;position: relative;}
+.room_price i{width: 10px;height: 13px;position:absolute;background: url(/img/hotel-detail-icon8.png) no-repeat -190px -30px;top:8px;left:150px;vertical-align: middle;}
+
+/* 酒店地图 */
+.room_map{width: 100%;height: 300px;background-color: #eee;margin-top: 50px;}
+.room_mapcontent{height: 100%;width: 100%}
+
+/* 点评 */
+.room_e{margin-top: 20px;border-bottom: 1px solid #ddd;}
+.room_e a{color: #333;padding:15px;font-size: 14px;font-weight: bold;height: 50px;line-height: 50px;}
+.room_e a:first-child{border-bottom: 3px solid #ff9d00;margin-right: 20px;margin-bottom: -3px;}
+.room_e a:nth-of-type(2){color: #666;}
+.room_e a:nth-of-type(2):hover{color: #333;}
+a.write_e{float: right;margin-right: 15px;padding: 0 10px 0 8px;background-color: #ffb200;color: #fff;line-height: 40px;border-radius: 3px;height: 40px;}
+a.write_e:hover{background-color: #ffa500;}
+a.write_e i{width: 15px;height: 17px;background:url(/img/hotel-detail-icon8.png) no-repeat -150px -140px;vertical-align: middle;margin-right: 5px;}
+
+
+/* 详细评论 */
+.detail_evaluate{border-bottom: 1px dashed #ccc;padding:30px 15px 20px 155px;margin-bottom: 50px;}
+.customername{float: left;width: 150px;position: relative;margin-left: -155px;}
+.customername a{color: #ffa800;font-size: 14px;}
+.customername span{color: #f35035;font-weight: bold;font-size: 12px;position: absolute;left:63px;top:30px;}
+.customername a:first-child{width:48px;height: 48px;margin-right: 10px;}
+.customername a img{width: 48px;height: 48px;border-radius: 50%;}
+.customername .nickname{position: relative;top:-30px;}
+
+.Dgood{float: right;width: 50px;text-align: center;font-size: 16px;margin-right: -15px;}
+.Dgood a{display: block;width: 27px;height: 27px;background: url(/img/hotel-detail-icon8.png) no-repeat -160px 0;margin: 1px auto;}
+.h_content{margin:0 60px 5px 0;font-size: 14px;}
+
+.h_img{margin-top: 15px;}
+.h_img a{float: left;width: 250px;height: 150px;margin-right: 10px;margin-bottom: 10px;}
+.h_img a img{width: 250px;height: 150px;border-radius: 5px;background-color: #eee;}
+
+.h_meta{margin-top: 7px;font-size: 12px;line-height: 20px;color: #333;}
+.meta_star{width: 102px;height: 18px;}
+.meta_time{margin-right: 16px;font-size: 14px;}
+
+
+.reponse{margin-top: 12px;}
+.reponse textarea{margin-top: 8px;padding: 5px 0 5px 8px;border: 1px solid #cecece;width: 820px;height: 50px;border-radius: 5px;line-height: 30px;transition:all 0.2s;}
+.res_a{/* display: none; */float: right;padding: 0 10px;margin-top: 10px;line-height: 26px;font-size: 14px;background-color: #ffa800;color: #fff;border-radius: 3px;margin-right: 10px;display: none;}

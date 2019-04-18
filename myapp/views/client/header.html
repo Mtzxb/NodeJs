@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="/css/head.css" type='text/css' rel='stylesheet' />
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		html,body{width:100%;height:100%;}
+		ul{list-style: none;}
+		a{text-decoration:none; outline-style: none; color:#333333;}
+	</style>
+	<title>头部</title> 
+</head>
+<body>
+	<!--头部-->
+		<div class='head'>
+			<div class='head_left'>旅游网</div>
+			<ul class='head_central'>
+				<li class="tiaozhuan tiaozhuan1"><a  href="http://localhost:8085/">首页</a></li>
+				<li class="tiaozhuan tiaozhuan2"><a  href="#">目的地</a></li>
+				<li class="tiaozhuan tiaozhuan3"><a  href="http://localhost:8085/travel">旅游攻略</a></li>
+				<li class="tiaozhuan tiaozhuan4"><a  href="http://localhost:8085/item">酒店</a></li>
+				<li class="tiaozhuan tiaozhuan5"><a  href="#">社区</a></li>
+			</ul>
+			<div class='head_right'>
+				<a href="#" class='float'><i class='head_right_sina'></i></a>
+				<a href="#" class='float'><i class='head_right_qq'></i></a>
+				<a href="#" class='float'><i class='head_right_weixin'></i></a>
+				<div class="user">
+					<a href="http://localhost:8085/load" class='text'>登录</a>
+					<span>|</span>
+					<a href="http://localhost:8085/register" class='text'>注册</a>
+				</div>	
+			</div>
+		</div>
+		<!--订单弹出层-->
+		<div class="orderCover">
+			<!-- <p>订单信息</p>
+			<div class="username">预订人：</div>
+			<div class="ordertime">预定时间：</div>
+			<div class="orderhotel">预定酒店：</div>
+			<div class="roomtype">房间类型:</div>
+			<a href="">返回</a> -->
+		</div>
+		<script type="text/javascript">
+			if (sessionStorage.length) {
+				$('.user').html(sessionStorage.user +'&emsp;<span>订单查询</span>&emsp;<a href = "">注销</a>').css('color','red');
+				$('.user >a').css({
+					'color':'#f90',
+					'font-size':'14px'
+				})
+			}
+			$('.user >a').click(function(e){
+				if (this.innerHTML == '注销') {
+					e.preventDefault();
+					sessionStorage.removeItem('user');
+					sessionStorage.clear()
+					location.reload();
+				}
+			})
+			$('.user >span').css('cursor','pointer');
+			var index = 0;
+			$('.user >span').click(function(e){
+					e.preventDefault();
+					index = 0;
+					$.ajax({
+						url: './api/orderSelect',
+						type: 'post',
+						data: {
+							'username': sessionStorage.user,
+							'index':index
+						},
+					}).then(function(res){
+						var res = res[0]
+						var str  = '<p>您的订单信息（最新订单）</p><div class="username">预订人：'+res.userName+'</div>'
+						str += '<div class="ordertime">预定时间:'+res.ordersDate+'</div>'
+						str += '<div class="orderhotel">预定酒店：'+res.hotelName+'</div>'
+						str += '<div class="roomtype">房间类型:'+res.roomType+'</div><a href="">下一条&emsp;<a href="">返回</a>';
+						$('.orderCover').css('display','block').html(str)
+					})		
+			})
+			$('.orderCover').on('click','a',function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				console.log(this.innerHTML)
+				if(this.innerHTML.indexOf('下一条') != -1){
+					index++
+					$.ajax({
+						url: './api/orderSelect',
+						type: 'post',
+						data: {
+							'username': sessionStorage.user,
+							'index':index
+						},
+					}).then(function(res){
+						if (!res.length) {
+							alert('没有更多信息')
+							return
+						}
+						var res = res[0]
+						var str  = '<p>您的订单信息</p><div class="username">预订人：'+res.userName+'</div>'
+						str += '<div class="ordertime">预定时间:'+res.ordersDate+'</div>'
+						str += '<div class="orderhotel">预定酒店：'+res.hotelName+'</div>'
+						str += '<div class="roomtype">房间类型:'+res.roomType+'</div><a href="">下一条&emsp;<a href="">返回</a>';
+						$('.orderCover').css('display','block').html(str);
+					})
+				}
+				if(this.innerHTML.indexOf('返回') != -1) {
+					$('.orderCover').css('display','none')
+				}
+			})
+		</script>
+</body>
+</html>

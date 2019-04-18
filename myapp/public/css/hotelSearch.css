@@ -1,0 +1,62 @@
+body{min-width: 1200px;}
+
+.head{background-color: #fff;border-bottom: 1px solid #eee;box-shadow: 1px 1px 0 #ccc;}
+
+.head .head_central .tiaozhuan4{background-color: #ff9d00;}
+
+/*------------------内容区域------------------*/
+.bg{width: 1000px;margin: 0 auto}
+/***********酒店区域标题****************/
+.title_box{height: 40px;margin: 20px auto;line-height:40px;width: 1000px;padding-left: 20px;overflow: visible;}
+.title{color: red;font-weight:bold;cursor: pointer;}
+.title:hover{text-decoration: underline;}
+.weather{width: 150px;float: right;height: 40px;line-height: 40px;}
+.weather img{margin: 0 10px;}
+.weather_hei{font-size: 14px;color: #888;line-height: 20px}
+
+/*****酒店搜索区域****/
+.hotel_search{height: 50px;margin-bottom: 10px}
+.hotel_area{width: 200px;height: 35px;border:1px solid #eee;border-radius: 5px;padding-left: 20px;float: left}
+.star_sear{height: 35px;cursor: pointer;border:1px solid #eee;float: left;margin-left: 10px;line-height: 35px}
+
+/*酒店table及分类*/
+.table_nav{border-bottom: 1px solid #eee}
+.hotel_class{background-color: #eee;padding: 0 20px;height: 35px;border-radius: 5px 5px 0 0 ;display: inline-block;cursor: pointer;text-align: center;line-height: 35px;overflow: visible;}
+.hotel_choose{width: 50%;height: 80px;}
+/****酒店价格分类展示****/
+.hotel_priceSelect{width: 100;height: 30px;}
+/*****酒店星级分类展示*******/
+.star_choose{z-index: 100}
+
+.choose_item{width:32%;float: left;height: 100%;margin-right: 1%;overflow: auto;}
+.choose_item>input{margin-bottom: 10px}
+.choose_price{width: 100%;height: 30px;margin:10px auto 0;}
+
+/*酒店详情列表*/
+.hotel_container{height: 293px;border-bottom: 1px solid #ccc;padding: 25px 0;width: 100%}
+.logo{width: 330px;height: 240px;float: left;margin-right: 20px;cursor: pointer}
+.logo img{width: 330px;height: 240px;border-radius: 10px}
+/******酒店详情描述******/
+.hotel_details{float: left;width: 300px;height: 240px;position: relative;}
+.hotel_name{font-size: 20px;font-weight: 700;color: #666;margin:5px 0}/*酒店名*/
+.hotel_star{color: #ffa800}/*酒店星级*/
+.hotel_des{margin:20px 0;}/*hotel descrip*/
+.hotel_region{position:absolute;bottom: 40px;font-size: 12px;height: 30px;}/*酒店位置列*/
+.location{width: 60px;height: 20px;line-height: 20px}
+.location img{width: 20px;height: 20px;vertical-align: middle}
+.hotel_region a{color: #f90}
+
+/***酒店订房列**/
+.hotel_orders{width: 300px;float: left;height: 100%;padding-top: 40px;margin-left: 20px;}
+.room_detail{height: 40px;border-bottom: 1px solid #eee;line-height: 40px;}
+.room_detail:hover{background-color: #eee;transition:all 0.1s;cursor: pointer}
+.rooms_type,.rooms_price{font-size: 20px;font-weight: 900;color: #666}
+.rooms_price{color: #ffa800;width: 100px;float: right;}
+
+/**酒店分页**/
+.paging{width: 1000px;margin:0 auto;height: 40px;}
+.prePage,.nextPage,.page_index{float: right;margin-top: 10px}
+.prePage span,.nextPage span{cursor: pointer;vertical-align: middle;float:left;background-color: #f90;border: 3px solid #f90;border-radius: 3px;color: white;cursor: pointer;font-weight: 700;margin-right: 5px}
+.page_index li{cursor: pointer;float: left;width: 26px;height: 26px;text-align: center;line-height: 26px;border-radius: 3px;margin-right: 5px;font-family:-webkit-pictograph;}
+.page_index li:hover{background-color: #ccc;}
+.active{background-color: #f90;}

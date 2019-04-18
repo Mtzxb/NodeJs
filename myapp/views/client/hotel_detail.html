@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>XXX 酒店</title>
+	<link rel="stylesheet" href="/css/hotel_detail.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<script src="/js/jquery.js"></script>
+	<script src="/js/hotel_detail.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cEChutVSLENUvsa1Sh9pM4cOcKfDonby"></script>
+</head>
+<body>
+	<div class="heads"></div>
+	<div class="InduHotel">
+		<div class="head_box"></div>
+		<!-- 酒店详情 酒店名字介绍部分 -->
+		<div class="hotel_head clearfix">
+			<div class="hotel_cname">
+				<span><!--这里是酒店名称--></span>
+			</div>
+			<div class="hotel_ename">
+				<span>Pullman Bangkok King Power <i></i></span>
+			</div>
+			<div class="hotel_location">
+				<span>地址：8/2 Rangnam Road,Thanon Phayathai Ratchathewi 
+					<a href="#"><i></i>查看地图</a>
+				</span>
+			</div>
+			<div class="hotel_extra">
+				<span class="hotel_score"><b>8.9</b> 分</span>
+				<span class="divided"></span>
+				<span class="eval">
+					<strong>非常好</strong>
+					<br>
+					<i></i>613评价
+				</span>
+			</div>
+		</div>
+
+		<!-- 酒店详情 酒店图片部分 -->
+		<div class="hotel_body clearfix">
+			<div class="hotel_bg">
+				<img src="http://b4-q.mafengwo.net/s11/M00/F5/C9/wKgBEFpSynaAX9l7AANjg3dBLZg46.jpeg?imageMogr2%2Fthumbnail%2F%211360x760r%2Fgravity%2FCenter%2Fcrop%2F%211360x760%2Fquality%2F90" alt="">
+				<div class="h_intro">
+					<p>酒店位置好，逛街十分便利，旁边是一家超大的皇权免税店。酒店装修豪华，有中文服务，沟通方便，还有去车站和景点的免费tutu车。</p>
+				</div>
+			</div>
+			<ul class="Himg_list">
+				<li><img src="http://n4-q.mafengwo.net/s7/M00/2D/0E/wKgB6lR0pFKAOnKLAAHpDYp_W6U97.jpeg?imageMogr2%2Fthumbnail%2F%21300x240r%2Fgravity%2FCenter%2Fcrop%2F%21300x240%2Fquality%2F90" alt=""></li>
+				<li><img src="http://p2-q.mafengwo.net/s7/M00/2D/43/wKgB6lR0pHaAF92hAANRdk758Jc78.jpeg?imageMogr2%2Fthumbnail%2F%21300x240r%2Fgravity%2FCenter%2Fcrop%2F%21300x240%2Fquality%2F90" alt=""></li>
+				<li><img src="http://n2-q.mafengwo.net/s7/M00/2D/3C/wKgB6lR0pHCAdZegAAInluWnrLM36.jpeg?imageMogr2%2Fthumbnail%2F%21300x240r%2Fgravity%2FCenter%2Fcrop%2F%21300x240%2Fquality%2F90" alt=""></li>
+				<li><img src="http://n1-q.mafengwo.net/s6/M00/10/37/wKgB4lMO81eAZZzbAAGBBT6rDcU07.jpeg?imageMogr2%2Fthumbnail%2F%21300x240r%2Fgravity%2FCenter%2Fcrop%2F%21300x240%2Fquality%2F90" alt=""></li>
+			</ul>
+		</div>
+		<!-- 酒店详情 酒店导航部分 -->
+		<div class="hotel_nav clearfix">
+			<ul class="nav_list">
+				<li><a href="#">预定</a></li>
+				<li><a href="#">位置</a></li>
+				<li><a href="#">攻略</a></li>
+				<li><a href="#">点评</a></li>
+				<li><a href="#">周边酒店</a></li>
+			</ul>
+			<div class="nav_r">
+				<a href="#" class="nav_a"><i></i>点评</a>
+				<a href="#" class="nav_b"><i></i>收藏</a>
+			</div>
+		</div>
+		
+		<!-- 酒店详情 酒店预订信息部分 -->
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+		<!-- 酒店价格部分 -->
+		<div class="booking_info">
+			<div class="booking_pri">
+				<div class="pri_orign">价格来源</div>
+				<div class="pri_kinds">最低价房型</div>
+				<div class="pri_price">最低价格/每晚</div>
+			</div>
+			<!-- <a href="#" class="room_item clearfix">
+				<div class="room_name">
+					<img src="http://images.mafengwo.net/images/hotel/ota/agoda_w100h20_2x_2.png" alt="">
+				</div>
+				<div class="room_type">高级房(2张单人床)</div>
+				<div class="room_price">￥792<i></i></div>
+			</a> -->
+		</div>
+
+		<!-- 地图 -->
+		<div class="room_map">
+			<div class="room_mapcontent" id="room_mapcontent"></div>
+		</div>
+		
+		<!-- 点评 -->
+		<div class="room_e clearfix">
+			<a href="#">全部点评156条</a>
+			<a href="#">相关游记68篇</a>
+			<a href="#" class="write_e"><i></i>写点评</a>
+		</div>
+
+		<!-- 详细评论 -->
+		<div class="detail_evaluate clearfix">
+			<div class="customername">
+				<a href="#" ><img src="http://p3-q.mafengwo.net/s9/M00/01/47/wKgBs1cSTnSAJ0MqAAB3FSa4lBk42.jpeg?imageMogr2%2Fthumbnail%2F%2196x96r%2Fgravity%2FCenter%2Fcrop%2F%2196x96%2Fquality%2F90" alt=""></a>
+				<a href="#" class="nickname">昵称</a><br>
+				<span>等级</span>
+			</div>
+			<div class="Dgood">
+				<span>1</span>
+				<a href="#"></a>
+			</div>
+			<div class="h_content">
+				<p>铂尔曼的设施环境都满分。酒店有中文服务 是中国人哦 沟通起来很轻松。地理位置也很好 反正打车去暹罗广场 四面佛 唐人街等一些景点都很近。坐BTS也很近。1楼有中餐厅和泰餐厅。2楼有西餐厅。4楼是健身房和Spa还有泳池。但是关门太早 晚上10点就关了。旁边就是免税店 酒店会送免税店的折扣券。在免税店每人当日消费满5000泰铢凭票去免税店一楼换取1000泰铢酒店消费券 一天只能换5张。这些券能用于酒店全部消费 用餐 spa 用车接机服务等等。超级划算。相当于一本护照消费5000人民币可换取1000人民币代金券。这几天的免税店购物后兑换的代金券完全够用酒店的一切消费了哈哈。</p>
+			</div>
+			<div class="h_img clearfix">
+				<a><img src="http://p4-q.mafengwo.net/s9/M00/1E/97/wKgBs1ctxv2AbpUBAAE_lst_vJ801.jpeg?imageMogr2%2Fthumbnail%2F%21500x300r%2Fgravity%2FCenter%2Fcrop%2F%21500x300%2Fquality%2F90" alt=""></a>
+				<a href="#"><img src="http://p4-q.mafengwo.net/s9/M00/1E/97/wKgBs1ctxv2AbpUBAAE_lst_vJ801.jpeg?imageMogr2%2Fthumbnail%2F%21500x300r%2Fgravity%2FCenter%2Fcrop%2F%21500x300%2Fquality%2F90" alt=""></a>
+				<a href="#"><img src="http://p4-q.mafengwo.net/s9/M00/1E/97/wKgBs1ctxv2AbpUBAAE_lst_vJ801.jpeg?imageMogr2%2Fthumbnail%2F%21500x300r%2Fgravity%2FCenter%2Fcrop%2F%21500x300%2Fquality%2F90" alt=""></a>
+			</div>
+			<div class="h_meta">
+				<span class="meta_star">1</span>
+				<span class="meta_time">时间</span>
+			</div>
+			<div class="reponse">
+				<textarea name="" id="res" placeholder="添加回复...."></textarea>
+				<a class="res_a">回复</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.bg{width: 1000px;margin: 0 auto;border:1px solid #eee}
+.bg::after{clear: both;content: "";display: block}
+.title{height: 40px;color: #888;font-size: 20px;text-align: center;background-color: #eee;line-height: 40px}
+/*左边内容区域*/
+.left_content{float: left; width: 200px;border:1px solid #eee}
+.selet_item{height: 30px;margin-top: 5px;border:1px solid #eee;line-height: 30px;text-indent: 10px;}
+
+
+/*右边内容部分*/
+.right_content{float: left;width: 700px;border:1px solid #f99}

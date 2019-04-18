@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>账号登录 - 马蜂窝</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/load.css">
+	<script src="/js/load.js"></script>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	<div class="load">
+		<!-- 首页logo -->
+		<div class="load_logo"> 
+			<a href="#" title="返回首页"></a>
+		</div>
+		<!-- 中间账号输入部分 -->
+		<div class="load_form">
+			<div class="load_inner">
+				<!-- 输入表单 -->
+				<form class="singup">
+					<div class="form_filed">
+						<input type="text" placeholder="您的邮箱/手机号" id="account" name="username">
+						<div class="err_tip">账号不能为空</div>
+					</div>
+					<div class="form_filed">
+						<input type="password" placeholder="您的密码" id="password" name="password">
+						<div class="err_tip1">密码不能为空</div>
+					</div>
+					<div class="load_forget">
+						<a href="#">忘记密码</a>
+					</div>
+					<div class="load_dl">
+						<button id="load_btn">登录</button>
+					</div>
+				</form>
+				<!-- 第三方登陆 -->
+				<div class="load_other">
+					<p>用合作网站账户直接登录</p>
+				</div>
+				<div class="load_bd">
+					<a href="https://passport.mafengwo.cn/weibo"><i class="weibo"></i>新浪微博</a>
+					<a href="https://passport.mafengwo.cn/qq"><i class="qq"></i>QQ</a>
+					<a href="https://passport.mafengwo.cn/wechat"><i class="wechat"></i>微信</a>
+				</div>
+			</div>
+			<div class="load_link">
+				还没有账号？
+				<a href="http://localhost:8085/register">马上注册</a>
+			</div>
+		</div>
+	</div>
+	<!-- 背景图片 -->
+	<div class="load_bg">
+		<!-- <img src="../images/6.jpg" alt=""> -->
+	</div>
+</body>
+</html>

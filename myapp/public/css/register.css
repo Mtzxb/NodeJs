@@ -1,0 +1,46 @@
+
+/* 登陆页面 */
+.load{z-index: 100;position: relative;overflow: hidden;}
+/* 返回首页 */
+.load_logo{width: 370px;margin: 60px auto 0;}
+.load_logo a {width: 75px;height: 90px;display: block;margin: 0 auto;background: url(/img/logo-new.png) no-repeat;}
+
+.load_inner{width: 370px;height: 450px;background-color: #fff;}
+
+/* 中间账号输入部分 */
+.load_form{width: 370px;margin: 0 auto;border-radius: 5px;}
+
+/* 表单输入 */
+.singup>div:first-child{padding-top: 40px;}
+.form_filed{width: 320px;margin: 0 auto;padding-top: 10px;clear: both;position: relative;}
+.form_filed input{width: 320px;height: 28px;border: 1px solid #d8d8d8;border-radius: 4px;font-size: 14px;color: #666;line-height: 28px;padding:18px 0 18px 12px;}
+.form_filed input:focus{border:1px solid #ffa200;box-shadow: 0 0 5px #ffa200;}
+.err_tip,.err_tip1,.err_tip2{width: 300px;font-size: 12px;color: #ff3c00;padding: 0 0 3px 22px;text-align: left;margin-top: 10px;background: url(/img/err_ico2.png) no-repeat 0 -60px #fff;display: none;position: absolute;top: 0;left: 0; }
+.err_tip1{top:-80px;}
+.err_tip2{top:-130px;}
+
+
+.load_dl{width: 320px;margin: 0 auto;padding: 12px 0 0;}
+.load_dl input{width: 320px;height: 42px;border: none;background-color: #fa8800;border-radius: 5px;text-align: center;line-height: 40px;font-size: 18px;color: #fff;cursor: pointer;font-weight: bold;}
+.reg_agreement{width: 320px;text-align: right;margin: 0 auto;padding: 8px 0 0;font-size: 12px;color: #ccc;}
+.reg_agreement a {font-size: 12px;color: #999;cursor: initial;}
+.reg_agreement a:hover{text-decoration: underline;color: #000;}
+
+/* 第三方登陆 */
+.load_other{margin-top: 30px;}
+.load_other p{border-top: 1px solid #ebebeb;color: #999;padding: 15px 0 20px 24px;font-size: 12px;}
+.load_bd{width: 348px;height: 84px;padding-left: 25px;}
+.load_bd a {width: 58px;height: 84px;text-align: center;font-size: 12px;color: #999;margin-right: 25px;display: inline-block;}
+.load_bd a i{width: 42px;height: 42px;background: url(/img/c_icon3.gif) no-repeat;margin: 0 6px 4px 10px;}
+.load_bd a .weibo{background-position: 0 0;}
+.load_bd a .qq{background-position: -42px 0;}
+.load_bd a .wechat{background-position: -294px 0;}
+.load_bd a:hover{color: #666;}
+
+/* 连接登录 */
+.load_link{width: 140px;margin: 10px auto;border-radius: 15px;text-align: center;font-size: 12px;color: #fff;padding: 4px 0;background-color: rgba(0,0,0,0.4);z-index: 10;}
+.load_link a{color: #fa8000;margin-left: 6px;}
+.load_link a:hover{text-decoration: underline;}
+
+/* 背景图片 */
+.reg_bg{background-position: 50% 50%;position: fixed;bottom: 0;right: 0;left: 0;top: 0;}

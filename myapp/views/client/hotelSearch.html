@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/hotelSearch.css">
+	<link rel="stylesheet" type="text/css" href="/css/rest.css">
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<meta charset="utf-8">
+	<title>酒店预订</title>
+</head>
+<body>
+	<div class="head"></div>
+	<!--搜索页标签-->
+	<div class="title_box">
+		<span>你在这里:&emsp;酒店预定></span>
+		<span class="title" id="title"> 
+			长沙酒店预订
+		</span>
+		<span class="weather">
+			<!-- <img src="http://api.k780.com/upload/weather/d/7.gif">
+			<span class="weather_hei">1°</span> -->
+		</span>
+	</div>
+	<div class="bg">
+		
+		<div class="hotel_search">
+			<input type="text" name="hotel_area" placeholder="输入开始搜索" class="hotel_area">
+			<span class="star_sear">查看价格</span>
+		</div>
+		<div class="table">
+			<!--搜索页table切换-->
+			<div class="table_nav">
+				<span class="hotel_class">全部</span>
+				<span class="hotel_class">五星级酒店</span>
+				<span class="hotel_class">精品酒店</span>
+			</div>
+		</div>
+		<!--酒店渲染dom结构-->
+	<!-- 	<div class="hotel_container">
+			<div class="logo">
+				<img src="">
+			</div>
+			<div class="hotel_details">
+				<div class="hotel_name" id="hotel_name">泰国酒店</div>
+				<div class="hotel_star">★★★★</div>
+				<div class="hotel_des">
+					台北车站周边的高性价比设计型青旅，每个房间都有不同主题，工业风格的公共空间宽敞明亮，可以将台北夜景一览无余。
+				</div>
+				<div class="hotel_region"><span class="location"><img src="/img/location.png">区域:</span><a href="">台北</a></div>
+			</div>
+			<div class="hotel_orders">
+				<p class="room_detail">
+					<span class="rooms_type">大房间</span><span class="rooms_price">100元 &emsp;></span>
+				</p>
+			</div>
+		</div> -->
+	</div>
+	<div class="paging">
+		<div class="nextPage">
+			<span class="next_page">后一页</span>
+			<span class="last_page">尾页</span>
+		</div>
+		<ul class="page_index">
+			<!-- <li>1</li> -->
+		</ul>
+		<div class="prePage">
+			<span class="first_page">首页</span>
+			<span class="pre_page">前一页</span>
+		</div>
+	</div>
+	<div id="footers">
+	</div>
+	
+	<script type="text/javascript">
+		//整个渲染思路 --先根据分类获取后台数据，根据数据长度生成页码
+		//将数据分页显示--当操作页码时--显示相应页码对应页面
+		
+		var data_baoliu;//用以保存ajax请求后数据的作用域
+		$('#footers').load('http://localhost:8085/foot');//渲染底部
+		$('.head').load('http://localhost:8085/head');//渲染头部
+
+		function hotel_classification(data){//封装酒店分类请求
+			loginweatherApi(data)
+			$.ajax({//酒店分类的ajax请求
+				url: './api/hotel_classification',
+				type: 'POST',
+				data: {data:data},
+			}).then(function(res){
+				makePage(res);
+				data_baoliu = res;//将后台数据保存起来
+				var index = 0;
+				page_fenye(index,data_baoliu)//分页渲染第一页
+			})
+		}
+
+		function makHotel_box(data){//酒店详情DOM渲染
+			if (data.length == 0) {
+				str = '<div class="hotel_container">没有数据</div>'
+			}
+			//开始渲染酒店预定标题
+			var str = decodeURI(window.location.search.slice(1));
+				str += '酒店预订'
+			$('#title').empty().html(str);
+
+			//开始渲染酒店列表
+			$(".hotel_container").remove();
+				var str = ""
+				for(var i =0 ;i <data.length;i++){
+					str += '<div class="hotel_container"><div class = "logo"><img src = "'+data[i].hotelImg+'"></div>';//渲染logo
+					str += '<div class = "hotel_details"><div class="hotel_name" id="hotel_name">'+data[i].hotelName+'</div><div class="hotel_star">'+data[i].hotelStar+'</div><div class="hotel_des">'+data[i].hotelDes+'</div>'
+					str += '<div class="hotel_region"><span class="location"><img src="/img/location.png">区域:</span>';
+					str += '<a href="">'+data[i].hotelProvince+'</a></div></div>';//酒店描述结构完成
+					str += '</div>';
+					(function(i){
+						$.ajax({
+							url: './api//hotelRoom_price',
+							type: 'post',
+							data:{star:data[i].hotelStar}
+						}).then(function(res){
+							var str1 = '<div class="hotel_orders">'
+							for(var j =0 ;j <res.length;j++){
+								str1 +='<p class="room_detail"><span class="rooms_type">'+res[j].roomType
+								str1 +='</span><span class="rooms_price">'+res[j].price+'</span></p>'; 
+							}
+							str1 +='</div>'
+							$('.hotel_container').eq(i).append(str1)
+						})
+					})(i)			
+				}
+			$('.bg').append(str);
+			$('.bg').on('click','p',function(e){
+				e.stopPropagation();
+				if (this.children.length == 2) {//判断点击的是否为价格p标签
+					var date = new Date().getTime();
+					var hotelname  = this.parentElement.parentElement.children[1].children[0].innerHTML;
+					var ordersDate = new Date();
+					var ordertime  = dateFtt("yyyy-MM-dd hh:mm:ss",ordersDate);
+					var roomType   = this.children[0].innerHTML;
+					if (sessionStorage.user) {
+						$.ajax({
+							url: './api/order',
+							type: 'POST',
+							data: {
+								'orderName':date,
+								'hotelName':hotelname,
+								'ordersDate':ordertime,
+								'roomType':roomType,
+								'userName':sessionStorage.user
+							},
+						}).then(function(res){
+							alert(res)
+						})	
+					}else{
+						alert('请登录后再下单')
+					}
+				}
+			})
+		}
+		
+		
+		
+		//从主页搜索后打开酒店界面
+		hotel_classification(decodeURI(window.location.search.slice(1)));
+		
+		//页面分页相关代码封装~~~~~~~~~~~~
+		
+		function makePage(res){//生成页码函数
+			var page_num = Math.ceil(res.length/5);//计算一共有多少页
+			var str1 =""
+			for(var i=1;i<=page_num;i++){
+				str1 += '<li class="pagenum">'+i+'</li>'
+			}
+			$('.page_index > li').remove();//清空页码
+			$('.page_index').append(str1);//生成页数li
+			$('.page_index > li').eq(0).attr('class','active');//给第一页的li添加属性
+		}
+
+		function page_fenye(index,data){//操作显示某一页函数封装
+			var arr = [];//定义一个新数组，用来储存当前页的数据
+			var max_num = Number(index) + 5;//解决最后一页数据不足五条的情况
+			if (max_num <= data.length) {//如果小于五条，就最大取到数据的最后一条
+				for(var i=index;i<index+5;i++){
+					arr.push(data[i])
+				}
+			}else{
+				for(var i=index;i<data.length;i++){
+					arr.push(data[i])
+				}
+			}	
+			makHotel_box(arr)//渲染分页后的界面
+		}
+
+		$('.page_index').on('click','li',function(e){//点击页码切换当前页时
+			e.stopPropagation();
+			$(this).attr('class','active').siblings().removeAttr('class','active');//给当前页的li添加属性
+			var index = (Number(this.innerHTML)-1)*5;//获取当前页数据的index值
+			page_fenye(index,data_baoliu)//分页渲染页面
+		})
+
+		$('.first_page').click(function(e){//点击首页时
+			e.stopPropagation();
+			var index = 0;
+			$('.page_index >li').eq(index).attr('class','active').siblings().removeAttr('class','active');
+			page_fenye(index,data_baoliu)//首页点击时，渲染页面
+		})
+
+		$('.last_page').click(function(e){//点击尾页时
+			e.stopPropagation();
+			var index = Number($('.page_index >li').last()[0].innerHTML) ;
+			$('.page_index >li').eq(index-1).attr('class','active').siblings().removeAttr('class','active');
+			page_fenye((index-1)*5,data_baoliu)
+		})
+
+		$('.next_page').click(function(e){//点击下一页时
+			e.stopPropagation();
+			var index = $('.page_index >.active').index();//获取当前页码
+			if (index == $('.page_index >li').last().index()) {//如果已经是最后一页
+				alert('没有更多更多类容');
+				return
+			}
+			index ++
+			$('.page_index >li').eq(index).attr('class','active').siblings().removeAttr('class','active');//设置页码样式
+			page_fenye(index*5,data_baoliu);//渲染酒店详情DOM
+		})
+
+		$('.pre_page').click(function(e){
+			e.stopPropagation();
+			var index = $('.page_index >.active').index();//获取当前页码
+			if (index == $('.page_index >li').first().index()) {//如果已经是第一页
+				alert('已经是第一页');
+				return
+			}
+			index --
+			$('.page_index >li').eq(index).attr('class','active').siblings().removeAttr('class','active');//设置页码样式
+			page_fenye(index*5,data_baoliu);//渲染酒店详情DOM 
+		})
+
+		//页面分页结束~~~~~~~~~~~~
+		
+		/*------------------天气相关代码--------------*/
+		function data_weather (res){//处理天气的回调函数
+			if (parseInt(res.success)) {//判断该城市是否能查询到天气
+				var weather_data = res.result[0];
+				if (new Date().getHours() > 18) {
+					var str = '<img src="'+weather_data.weather_icon1+'">';
+				}else{
+					var str = '<img src="'+weather_data.weather_icon+'">';
+				}
+				str += '<span class="weather_hei">' + weather_data.weather +'<br/>'+ weather_data.temperature +'</span>'
+			}else{
+				str = '<span class="weather_hei">暂无天气信息</span>'
+			}
+			$('.weather').append(str)
+		}
+
+		function loginweatherApi (res){//生成获取天气的Api接口
+			var script = document.createElement('script');
+			script.src = "http://api.k780.com:88/?app=weather.future&weaid=1&&appkey=10003&weaid="+res+"&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json&jsoncallback=data_weather";
+			$('body').append(script)
+		}
+		/*-------------天气相关代码结束---------------*/
+
+		/*----------渲染酒店详情页----------*/
+		$('.bg').on('click','.logo',function(){
+			for(var i=0;i<data_baoliu.length;i++){
+				if(data_baoliu[i].hotelName == $(this).next()[0].children[0].innerHTML){
+					window.location.href = 'http://localhost:8085/hotel_detail?'+data_baoliu[i].hotelID+'';
+				}
+			}
+		})
+
+		$('.hotel_class').click(function(){//酒店table点击分类
+			$(this).siblings().css({
+				backgroundColor: '#eee',
+				color: '#000'
+			});
+			$(this).css({
+				backgroundColor: '#ffa800',
+				color: '#fff'
+			});
+			//开始封装数据，发送ajax请求
+			var data = this.innerHTML;
+			hotel_classification(data);//将data传入，执行酒店分页(在分页函数中，先获取所有数据，后分页)
+		})
+
+		$('.star_sear').click(function(){
+			console.log()
+			if ($('.hotel_area')[0].value) {
+				window.location.href='http://localhost:8085/search?'+$('.hotel_area')[0].value;
+				hotel_classification(decodeURI(window.location.search.slice(1)));
+			}else{
+				alert('请输入搜索内容')
+			}//酒店分类页面搜索
+		})
+
+
+		function dateFtt(fmt,date){ //时间格式化函数封装
+			  var o = {   
+			    "M+" : date.getMonth()+1,                 //月份   
+			    "d+" : date.getDate(),                    //日   
+			    "h+" : date.getHours(),                   //小时   
+			    "m+" : date.getMinutes(),                 //分   
+			    "s+" : date.getSeconds(),                 //秒   
+			    "q+" : Math.floor((date.getMonth()+3)/3), //季度   
+			    "S"  : date.getMilliseconds()             //毫秒   
+			  };   
+			  if(/(y+)/.test(fmt))   
+			    fmt=fmt.replace(RegExp.$1, (date.getFullYear()+"").substr(4 - RegExp.$1.length));   
+			  for(var k in o)   
+			    if(new RegExp("("+ k +")").test(fmt))   
+			  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
+			  return fmt;   
+		} 
+	</script>
+</body>
+</html>

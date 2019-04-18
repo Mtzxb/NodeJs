@@ -1,0 +1,30 @@
+/*。。。。头部样式。。。。*/
+.head{height:100%;background-color:#fff;margin:0 auto;position:relative;}
+.head{height:58px;line-height:58px;border-bottom: 1px solid #aaa;}
+.head a{color: #333;font-weight: 550}
+.head .head_left{color:#4f5151;font-size:25px;position:absolute;left:180px;top:0;font-weight: bold;}
+.head .head_central{width:500px;position:absolute;top:0;left:340px;}
+.head .head_central a{font-size:14px;}
+.head .head_central li{float:left;margin-right:20px;width:60px;height:58px;text-align: center;box-sizing: border-box;}
+.tiaozhuan1{background-color:#ff9d00;}
+.head .head_central li:last-child{margin: 0;}
+.head .head_central li:hover{border-bottom: 4px solid #ff9d00;cursor: pointer;}
+.head .head_central li:first-child:hover{border-bottom: 0;}
+.head .head_central:after{ display:block;content:" ";clear: both;}
+.head .head_right{position:absolute;top:0;left: 840px;}
+.head .head_right .float{display: block;height:58px;float:left;margin-right:10px;}
+.head .head_right .text{padding: 10px;color:#ff9e00;}
+.head .head_right .user{float:left}
+.head .head_right i{display: inline-block;width:35px;height:35px;line-height: 58px; vertical-align: middle;}
+.head .head_right_sina{background:url(/img/biao1.png) no-repeat;background-size: 35px 35px;}
+.head .head_right_sina:hover{background: url(/img/xinlang.png) no-repeat;background-size: 35px 35px;}
+.head .head_right_qq{background: url(/img/qq1.png) no-repeat;background-size: 35px 35px;}
+.head .head_right_qq:hover{background: url(/img/qq.png) no-repeat;background-size: 35px 35px;}
+.head .head_right_weixin{background: url(/img/weixin.png) no-repeat;background-size: 35px 35px;}
+.head .head_right_weixin:hover{background: url(/img/weixin1.png) no-repeat;background-size: 35px 35px;}
+
+/*************下单及查询时的弹出****************/
+.orderCover{padding-left: 40px;width: 400px;height: 300px;border:1px solid #f90;position: absolute;top: 150px;left: 450px;z-index: 100;background-color: #fff;display: none;}
+.orderCover p{height: 30px;line-height: 30px;text-align: center}
+.orderCover div{height: 50px;margin-top: 5px}
+.orderCover a{color: blue;font-size: 14px;}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>账号注册 - 马蜂窝</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/register.css">
+	<script type="text/javascript" src="/js/register.js"></script>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<body>
+	<div class="load">
+		<!-- 首页logo -->
+		<div class="load_logo"> 
+			<a href="#" title="返回首页"></a>
+		</div>
+		<!-- 中间账号输入部分 -->
+		<div class="load_form">
+			<div class="load_inner">
+				<!-- 输入表单 -->
+				<form  class="singup" id="register_form">
+					<div class="form_filed">
+						<input type="text" placeholder="请输入您的用户名" id="tel" name="username" autofocus>
+						<div class="err_tip">用户名不能为空</div>
+					</div>
+					<div class="form_filed">
+						<input type="password" placeholder="请输入您的密码" id="pwd" name="password">
+						<div class="err_tip1">密码不能为空</div>
+					</div>
+					<div class="form_filed">
+						<input type="password" placeholder="请确定您的密码" id="cpwd" name="password_sure">
+						<div class="err_tip2">密码不一致,请重新输入</div>
+					</div>
+					<div class="form_filed">
+						<input type="text" placeholder="请输入您的昵称" id="nickname" name="nickname">
+					</div>
+					<div class="load_dl">
+						<input type="submit" name="" id="register_btn" value="立即注册">
+					</div>
+					<div class="reg_agreement">
+						注册视为同意
+						<a href="http://www.mafengwo.cn/s/agreement.html" target="_blank">《马蜂窝用户使用协议》</a>
+					</div>
+				</form>
+				<!-- 第三方登陆 -->
+				<div class="load_other">
+					<p>用合作网站账户直接登录</p>
+				</div>
+				<div class="load_bd">
+					<a href="https://passport.mafengwo.cn/weibo"><i class="weibo"></i>新浪微博</a>
+					<a href="https://passport.mafengwo.cn/qq"><i class="qq"></i>QQ</a>
+					<a href="https://passport.mafengwo.cn/wechat"><i class="wechat"></i>微信</a>
+				</div>
+			</div>
+			<div class="load_link">
+				已经注册？
+				<a href="http://localhost:8085/load">马上登录</a>
+			</div>
+		</div>
+	</div>
+	<!-- 背景图片 -->
+	<div class="reg_bg">
+	</div>
+</body>
+</html>
